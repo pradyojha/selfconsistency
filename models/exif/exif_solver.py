@@ -70,7 +70,7 @@ class ExifSolver(object):
                 print('Variables intitializing from scratch')
                 for var in tf.trainable_variables():
                     if var not in variables_to_restore:
-                        print var
+                        print(var)
                 print('Succesfully restored %i variables' % len(variables_to_restore))
                 self.i = 0
         else:
