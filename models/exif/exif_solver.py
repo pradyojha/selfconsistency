@@ -47,6 +47,8 @@ class ExifSolver(object):
 
         # Try to load checkpoint
         if self.checkpoint is not None:
+            print('self.checkpoint - %s', self.checkpoint)
+            print('self.checkpoint + .index - %s', self.checkpoint + '.index')
             assert os.path.exists(self.checkpoint) or os.path.exists(self.checkpoint + '.index'), 'checkpoint does not exist'
             try:
                 self.saver.restore(self.sess, self.checkpoint)
