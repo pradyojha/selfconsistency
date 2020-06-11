@@ -3,7 +3,7 @@ import numpy as np
 import time
 import multiprocessing as mp
 import threading
-import Queue
+#import Queue
             
 class CustomRunner(object):
     """
@@ -86,10 +86,10 @@ class CustomRunner(object):
             count += 1
             if processes_all_done and self.queue.empty():
                 break
-            try:
-                data = self.queue.get(5)
-            except Queue.Empty:
-                continue
+            #try:
+            data = self.queue.get(5)
+            #except Queue.Empty:
+            #continue
                 
             if type(data) == type(StopIteration()):
                 tot_p_end += 1
