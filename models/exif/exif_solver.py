@@ -51,7 +51,7 @@ class ExifSolver(object):
             try:
                 self.saver.restore(self.sess, self.checkpoint)
                 self.i = io.parse_checkpoint(self.checkpoint)
-                print 'Succesfully resuming from %s' % self.checkpoint
+                print ('Succesfully resuming from %s', self.checkpoint)
             except Exception:
                 print traceback.format_exc()
                 try:
