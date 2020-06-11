@@ -380,7 +380,8 @@ if __name__ == '__main__':
     assert os.path.exists(cfg.im_path)
     
     imid = cfg.im_path.split('/')[-1].split('.')[0]
-    save_path = os.path.join('./images', imid + '_result.png')
+    #save_path = os.path.join('./images', imid + '_result.png')
+    save_path = os.path.join('selfconsistency/images', imid + '_result.png')    
     
     ckpt_path = './ckpt/exif_final/exif_final.ckpt'
     exif_demo = Demo(ckpt_path=ckpt_path, use_gpu=0, quality=3.0, num_per_dim=30)
